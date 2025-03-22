@@ -44,5 +44,21 @@ unsigned int faStr2(const char *str) {
 }
 
 unsigned int faStr3(const char *str) {
-    return 0;
+    double count = 0;
+    double sum = 0;
+    bool inWord = false;
+    while (*str) {
+        if (*str != ' ' && inWord == false) {
+            count++;
+            sum++;
+            inWord = true;
+        } else if (*str != ' ' && inWord == true) {
+            sum++;
+        } else if (*str == ' ' && inWord == true) {
+            inWord = false;
+        }
+        str++;
+    }
+    double srsum = sum/count;
+    return round(srsum);
 }
