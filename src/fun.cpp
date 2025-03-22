@@ -24,7 +24,23 @@ unsigned int faStr1(const char *str) {
 }
 
 unsigned int faStr2(const char *str) {
-    return 0;
+    int count = 0;
+    bool inWord = false;
+    bool plusFormat = true;
+    while (*str) {
+        if (*str != ' ' && inWord == false) {
+            plusFormat = false;
+            if (isupper(*str)) plusFormat = true;
+            inWord = true;
+        } else if (inWord == true && *str != ' ' && !islower(*str)) {
+            plusFormat = false;
+        } else if (*str == ' ' && inWord == true) {
+            inWord = false;
+            if (plusFormat) count++;
+        }
+        str++;
+    }
+    return count;
 }
 
 unsigned int faStr3(const char *str) {
