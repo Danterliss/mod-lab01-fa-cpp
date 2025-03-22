@@ -52,9 +52,11 @@ unsigned int faStr3(const char *str) {
             count++;
             sum++;
             inWord = true;
-        } else if (*str != ' ' && inWord == true) {
+        } 
+        else if (*str != ' ' && inWord == true) {
             sum++;
-        } else if (*str == ' ' && inWord == true) {
+        } 
+        else if (*str == ' ' && inWord == true) {
             inWord = false;
         }
         str++;
