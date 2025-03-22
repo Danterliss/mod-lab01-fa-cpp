@@ -1,12 +1,10 @@
 // Copyright 2022 UNN-IASR
-#include "fun.h"
 #include <iostream>
-
-using namespace std;
+#include "fun.h"
 
 int main() {
-    cout << faStr1("hjghg7jd 254886  fkgg:fd") << endl;
-    cout << faStr2("sdfghrey FGGRDS  Dfgrgr") << endl;
-    cout << faStr3("ewsrdfghj 12541 kjhjgf") << endl;
+    std::cout << faStr1("hjghg7jd 254886  fkgg:fd") << std::endl;
+    std::cout << faStr2("sdfghrey FGGRDS  Dfgrgr") << std::endl;
+    std::cout << faStr3("ewsrdfghj 12541 kjhjgf") << std::endl;
     return 0;
 }

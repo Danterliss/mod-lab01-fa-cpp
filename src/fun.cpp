@@ -1,7 +1,7 @@
 // Copyright 2022 UNN-IASR
-#include "fun.h"
 #include <iostream>
 #include <cmath>
+#include "fun.h"
 
 unsigned int faStr1(const char *str) {
     int count = 0;
@@ -52,11 +52,9 @@ unsigned int faStr3(const char *str) {
             count++;
             sum++;
             inWord = true;
-        } 
-        else if (*str != ' ' && inWord == true) {
+        } else if (*str != ' ' && inWord == true) {
             sum++;
-        } 
-        else if (*str == ' ' && inWord == true) {
+        } else if (*str == ' ' && inWord == true) {
             inWord = false;
         }
         str++;
